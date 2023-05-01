@@ -1,21 +1,18 @@
 import { useRef } from "react";
-const MyTodo = () => {
+const MyTodo:React.FC<{addTodo:(text:string)=>void}> = (props) => {
 	const todoTextInput = useRef<HTMLInputElement>(null);
-	const todoNumInput = useRef<HTMLInputElement>(null);
 	const submitHandler = (e: React.FormEvent) => {
 		e.preventDefault();
 		const enteredText = todoTextInput.current!.value;
 		if (enteredText.trim().length === 0) {
 			return;
 		}
-
-		const enteredNum: number = todoTextInput.current!.valueAsNumber;
+		props.addTodo(enteredText)
 	}
 	return (
 		<form onSubmit={submitHandler}>
 			<label htmlFor="text">할일내용:</label>
 			<input type="text" id="text" ref={todoTextInput} />
-			<input type="number" ref={todoNumInput} />
 			<button>추가</button>
 		</form>
 	);
