@@ -15,15 +15,16 @@
   "editor.suggest.showDeprecated": false,
   "editor.suggest.showEnums": false,
   "editor.suggest.showEnumMembers": false,
-  "typescript.suggest.completeJSDocs": false,
+  "typescript.suggest.completeJSDocs": true,
   "javascript.suggest.classMemberSnippets.enabled": false,
   "javascript.suggest.completeJSDocs": false,
-  "javascript.suggest.names": false,
+  "javascript.suggest.names": true,
   "javascript.suggest.jsdoc.generateReturns": false,
   "typescript.suggest.jsdoc.generateReturns": false,
-  "typescript.suggest.objectLiteralMethodSnippets.enabled": false,
-  "typescript.suggestionActions.enabled": false,
-  "javascript.suggestionActions.enabled": false,
+  "typescript.suggest.objectLiteralMethodSnippets.enabled": true,
+  "typescript.suggestionActions.enabled": true,
+  "javascript.suggestionActions.enabled": true,
   "prettier.bracketSameLine": true,
-  "prettier.singleAttributePerLine": true
+  "prettier.singleAttributePerLine": true,
+  "typescript.suggest.completeFunctionCalls": true
 }
