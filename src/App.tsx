@@ -5,8 +5,8 @@ import Todo from "./models/todo";
 
 function App() {
 	const [todos, setTodos] = useState<Todo[]>([]);
-	const addTodoHandler = (todoText: string, todoComplete: boolean) => {
-		const newTodo = new Todo(todoText, todoComplete);
+	const addTodoHandler = (todoText: string) => {
+		const newTodo = new Todo(todoText);
 		setTodos((prevTodos) => {
 			return prevTodos.concat(newTodo);
 		});
