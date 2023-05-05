@@ -1,9 +1,7 @@
-const TodoItem: React.FC<{ text: string; complete: string }> = (props) => {
-	console.log(props);
+const TodoItem: React.FC<{ text: string; complete: boolean }> = (props) => {
 	return (
 		<>
-			<li>{props.text}</li>
-			<li>{props.complete}</li>
+			<li><label><input type="checkbox" checked={props.complete}/>{props.text}</label> </li>
 		</>
 	);
 };
