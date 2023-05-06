@@ -6,14 +6,16 @@ type TodoContextObj = {
   addTodo: (text: string) => void;
   deleteTodo: (id: string) => void
 }
-
+type Props = {
+  children: React.ReactNode;
+};
 export const TodoContext = React.createContext<TodoContextObj>({
   items: [],
   addTodo: () => { },
   deleteTodo: (id: string) => { }
 });
 
-const TodoContextProvider: React.FC = (props) => {
+const TodoContextProvider: React.FC<Props> = ({ children }) => {
 
   const [todos, setTodos] = useState<Todo[]>([]);
   const addTodoHandler = (todoText: string) => {
@@ -36,7 +38,7 @@ const TodoContextProvider: React.FC = (props) => {
 
   return (
     <TodoContext.Provider value={contextValue}>
-      {props.children}
+      {children}
     </TodoContext.Provider>)
 };
 
