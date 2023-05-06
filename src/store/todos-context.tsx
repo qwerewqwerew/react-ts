@@ -3,7 +3,7 @@ import Todo from "../models/todo";
 
 type TodoContextObj = {
   items: Todo[];
-  addTodo: (text:string) => void;
+  addTodo: (text: string) => void;
   deleteTodo: (id: string) => void
 }
 
@@ -13,7 +13,8 @@ export const TodoContext = React.createContext<TodoContextObj>({
   deleteTodo: (id: string) => { }
 });
 
-const TodosContextProvider: React.FC = (props) => {
+const TodoContextProvider: React.FC = (props) => {
+
   const [todos, setTodos] = useState<Todo[]>([]);
   const addTodoHandler = (todoText: string) => {
     const newTodo = new Todo(todoText);
@@ -27,7 +28,7 @@ const TodosContextProvider: React.FC = (props) => {
     })
   };
 
-  const contextValue:TodoContextObj ={
+  const contextValue: TodoContextObj = {
     items: todos,
     addTodo: addTodoHandler,
     deleteTodo: delTodoHandler
@@ -40,4 +41,4 @@ const TodosContextProvider: React.FC = (props) => {
 };
 
 
-export default TodosContextProvider;
+export default TodoContextProvider;
