@@ -12,5 +12,7 @@
   "editor.suggest.showStructs": false,
   "editor.suggest.showUnits": false,
   "editor.suggest.showUsers": false,
-  "prettier.printWidth": 300
+  "prettier.printWidth": 300,
+  "prettier.bracketSameLine": true,
+  "prettier.singleAttributePerLine": true
 }

@@ -1,6 +1,6 @@
 import classes from "./MyTodo.module.css";
 import { useRef } from "react";
-const MyTodo: React.FC<{ addTodo: (text: string) => void }> = (props) => {
+const MyTodo: React.FC<{ addTodo: (text: string) => void; }> = (props) => {
 	const todoTextInput = useRef<HTMLInputElement>(null);
 	const submitHandler = (e: React.FormEvent) => {
 		e.preventDefault();
